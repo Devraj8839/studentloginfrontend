@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automated Student Attendance Monitoring and Analytics System</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .hero-section {
+            background: linear-gradient(90deg, rgb(211, 47, 6) 0%, rgb(180, 65, 7) 35%, rgba(0,212,255,1) 100%);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Header -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-blue-700">IPS Academy</a>
+            <div class="hidden md:flex items-center space-x-6">
+                <a href="#features" class="text-gray-600 hover:text-blue-700 transition duration-300">Features</a>
+                <a href="#how-it-works" class="text-gray-600 hover:text-blue-700 transition duration-300">How It Works</a>
+                <a href="#analytics" class="text-gray-600 hover:text-blue-700 transition duration-300">Analytics</a>
+                <a href="#login" class="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition duration-300">Login</a>
+            </div>
+            <button class="md:hidden" id="mobile-menu-button">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </nav>
+        <!-- Mobile Menu -->
+        <div class="md:hidden hidden" id="mobile-menu">
+            <a href="#features" class="block py-2 px-4 text-sm hover:bg-gray-100">Features</a>
+            <a href="#how-it-works" class="block py-2 px-4 text-sm hover:bg-gray-100">How It Works</a>
+            <a href="#analytics" class="block py-2 px-4 text-sm hover:bg-gray-100">Analytics</a>
+            <a href="#login" class="block py-2 px-4 text-sm bg-blue-600 text-white text-center rounded-b-md">Login</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-section text-white py-20 md:py-32">
+            <div class="container mx-auto px-6 text-center">
+                <h1 class="text-4xl md:text-6xl font-bold mb-4 leading-tight">Smart Attendance, Smarter Insights.</h1>
+                <p class="text-lg md:text-xl mb-8 max-w-3xl mx-auto">An automated system for colleges to effortlessly monitor student attendance and derive actionable analytics for improved academic performance.</p>
+                <a href="#login" class="bg-white text-blue-700 font-bold py-3 px-8 rounded-full hover:bg-gray-200 transition duration-300 text-lg">Access Your Portal</a>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section id="features" class="py-16 md:py-24 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900">System Features</h2>
+                    <p class="text-gray-600 mt-2">Everything you need for modern attendance management.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Feature 1 -->
+                    <div class="bg-gray-50 p-8 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                        <div class="flex items-center justify-center h-12 w-12 rounded-full bg-blue-100 text-blue-600 mb-4">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"></path></svg>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Automated Tracking</h3>
+                        <p class="text-gray-600">Utilizes QR codes, biometrics, or RFID for seamless and error-free attendance marking, saving valuable class time.</p>
+                    </div>
+                    <!-- Feature 2 -->
+                    <div class="bg-gray-50 p-8 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                        <div class="flex items-center justify-center h-12 w-12 rounded-full bg-blue-100 text-blue-600 mb-4">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path></svg>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Real-time Dashboards</h3>
+                        <p class="text-gray-600">Faculty and administrators get instant access to live attendance data, class occupancy, and student presence.</p>
+                    </div>
+                    <!-- Feature 3 -->
+                    <div class="bg-gray-50 p-8 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                        <div class="flex items-center justify-center h-12 w-12 rounded-full bg-blue-100 text-blue-600 mb-4">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Insightful Analytics</h3>
+                        <p class="text-gray-600">Generate detailed reports on attendance trends, correlate with academic scores, and identify at-risk students.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- How It Works Section -->
+        <section id="how-it-works" class="py-16 md:py-24 bg-gray-50">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900">Simple & Efficient Process</h2>
+                    <p class="text-gray-600 mt-2">Three easy steps to transform your attendance system.</p>
+                </div>
+                <div class="flex flex-col md:flex-row justify-center items-center gap-8 md:gap-16">
+                    <!-- Step 1 -->
+                    <div class="text-center max-w-xs">
+                        <div class="bg-blue-600 text-white rounded-full h-20 w-20 flex items-center justify-center text-3xl font-bold mx-auto mb-4">1</div>
+                        <h3 class="text-xl font-semibold mb-2">Mark Attendance</h3>
+                        <p class="text-gray-600">Students check-in using their designated method (QR, Biometric, etc.) at the start of each class.</p>
+                    </div>
+                    <!-- Step 2 -->
+                    <div class="text-center max-w-xs">
+                        <div class="bg-blue-600 text-white rounded-full h-20 w-20 flex items-center justify-center text-3xl font-bold mx-auto mb-4">2</div>
+                        <h3 class="text-xl font-semibold mb-2">System Verifies</h3>
+                        <p class="text-gray-600">The system instantly records and verifies the attendance data, updating records in real-time.</p>
+                    </div>
+                    <!-- Step 3 -->
+                    <div class="text-center max-w-xs">
+                        <div class="bg-blue-600 text-white rounded-full h-20 w-20 flex items-center justify-center text-3xl font-bold mx-auto mb-4">3</div>
+                        <h3 class="text-xl font-semibold mb-2">View Reports</h3>
+                        <p class="text-gray-600">Faculty and admins can immediately view dashboards and generate reports for analysis.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Analytics Showcase & Login Section -->
+        <section id="login" class="py-16 md:py-24 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="flex flex-col lg:flex-row items-center justify-center gap-12 lg:gap-20">
+                    <!-- Analytics Mockup -->
+                    <div class="lg:w-1/2 w-full" id="analytics">
+                        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Data-Driven Decisions</h2>
+                        <p class="text-gray-600 mb-8">Visualize attendance data to uncover patterns, improve student engagement, and support academic success. Our analytics engine turns raw data into a powerful tool for educators.</p>
+                        <div class="bg-gray-100 p-6 rounded-lg shadow-inner">
+                            <img src="https://placehold.co/600x400/E2E8F0/4A5568?text=Analytics+Dashboard+Mockup" alt="Analytics Dashboard Mockup" class="w-full h-auto rounded-md shadow-lg">
+                        </div>
+                    </div>
+
+                    <!-- Login Form -->
+                    <div class="lg:w-1/2 w-full max-w-md">
+                        <div class="bg-white p-8 rounded-xl shadow-2xl border border-gray-100">
+                            <h2 class="text-2xl font-bold text-center text-gray-800 mb-1">Welcome Back!</h2>
+                            <p class="text-center text-gray-500 mb-8">Login to your portal.</p>
+                            <form id="loginForm">
+                                <div class="mb-4">
+                                    <label for="role" class="block text-sm font-medium text-gray-700 mb-1">I am a</label>
+                                    <select id="role" name="role" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                        <option>Student</option>
+                                        <option>Faculty / Administrator</option>
+                                    </select>
+                                </div>
+                                <div class="mb-4">
+                                    <label for="userID" class="block text-sm font-medium text-gray-700 mb-1">User ID / Email</label>
+                                    <input type="text" id="userID" name="userID" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="e.g., your-id@college.edu" required>
+                                </div>
+                                <div class="mb-6">
+                                    <label for="password" class="block text-sm font-medium text-gray-700 mb-1">Password</label>
+                                    <input type="password" id="password" name="password" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="••••••••" required>
+                                </div>
+                                <button type="submit" class="w-full bg-blue-600 text-white font-bold py-3 px-4 rounded-md hover:bg-blue-700 transition duration-300">Login Securely</button>
+                                <p class="text-xs text-center text-gray-500 mt-4">
+                                    <a href="#" class="hover:underline">Forgot Password?</a>
+                                </p>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-6 text-center">
+            <p>&copy; 2025 Attendlytics - Automated Student Attendance System. All Rights Reserved.</p>
+            <p class="text-sm text-gray-400 mt-2">Designed for the modern educational institution.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Form submission handler
+        const loginForm = document.getElementById('loginForm');
+        loginForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            // In a real application, you would handle the login logic here.
+            // For this demo, we'll just log the data.
+            const formData = new FormData(loginForm);
+            const data = Object.fromEntries(formData.entries());
+            console.log('Login attempt:', data);
+            
+            // Show a simple confirmation message
+            alert('Login functionality is for demonstration purposes. Check console for data.');
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>
